@@ -1,10 +1,10 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
-import {borderColor} from '@material-ui/system';
-
+import { borderColor } from '@material-ui/system';
+import {useHistory} from "react-router-dom";
 const useStyles = makeStyles({
   root: {
     flexGrow: 1,
@@ -13,14 +13,15 @@ const useStyles = makeStyles({
     borderColor: 'brown'
   }
 });
-
-export default function CenteredTabs() {
+const CenteredTabs = props => {
+  let history = useHistory();
+  console.log(history);
   const classes = useStyles();
   const [value, setValue] = React.useState(0);
-
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
+
 
   return (
     <Paper className={classes.root}>
@@ -31,11 +32,40 @@ export default function CenteredTabs() {
         textColor="white"
         centered
       >
-        <Tab label="About" />
-        <Tab label="Experience" />
-        <Tab label="Projects" />
-        <Tab label="Contacts" />
+        <Tab
+          label="Home"
+          onClick={() => {
+            history.push("/");
+          }}
+        />
+        <Tab
+          label="About"
+          onClick={() => {
+            history.push("/about");
+          }}
+        />
+        <Tab
+          label="Experience"
+          onClick={() => {
+            history.push("/experience");
+          }}
+        />
+
+        <Tab
+          label="Projects"
+          onClick={() => {
+            history.push("/projects");
+          }}
+        />
+        <Tab
+          label="Contacts"
+          onClick={() => {
+            history.push("/contact");
+          }}
+        />
       </Tabs>
     </Paper>
   );
 }
+
+  export default CenteredTabs

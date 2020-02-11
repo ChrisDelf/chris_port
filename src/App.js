@@ -20,8 +20,8 @@ export const theme = {
 function App() {
   return (
     <div className="App">
-      <CenteredTabs />
       <Router>
+        <CenteredTabs />
         <Route exact path="/" component={Home} />
         <Route path="/about" component={About} />
         <Route path="/projects" component={Projects} />
