@@ -1,6 +1,6 @@
 .ant-carousel .slick-slide {
   text-align: center;
-  height: 900px;
+  height: 700px;
   line-height: 160px;
   background: #364d79;
   overflow: hidden;
@@ -8,6 +8,35 @@
 
 .ant-carousel .slick-slide h3 {
   color: #fff;
+
+}
+
+.CardCon{
+  display:flex;
+  flex-direction: row;
+  /* justify-content: center; */
+  height: 100%;
+  width: 100%;
+}
+
+img{
+  height: 600px;
+  align-self: center;
+}
+
+.ant-carousel .slick-slide img {
+  display: inline;
+}
+
+.ant-carousel .slick-slide div {
+  display: flex;
+
+}
+
+.ButtonCon{
+  display:flex;
+  flex-direction: row;
+  justify-content: space-evenly;
 }
 
 
