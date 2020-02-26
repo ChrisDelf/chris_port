@@ -4,8 +4,8 @@
   margin-bottom: -52px;
 }
 
-.root{
-  height:100%;
+.root {
+  height: 100%;
 }
 
 .App-logo {
@@ -27,7 +27,6 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
 }
 
 .App-link {
@@ -42,10 +41,11 @@
     transform: rotate(360deg);
   }
 }
-.footer, .push{
+.footer,
+.push {
   height: 50px;
-
 }
-.body{
+.body {
   height: 100%;
+  background: #ffffe0;
 }
