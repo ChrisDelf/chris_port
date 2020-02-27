@@ -22,7 +22,8 @@ export const theme = {
 };
 const useStyles = makeStyles({
   backgound: {
-    top: 49
+    top: 49,
+    backgoundColor: "white"
   }
 });
 
@@ -38,7 +39,7 @@ function App() {
   return (
     <>
       <div className="App">
-        <ParticlesBg className= "aniBack" type="random" config = {config} bg={true}/>
+        <ParticlesBg className= "aniBack" type="thick" config = {config} bg={true}/>
         <Router>
           <CenteredTabs />
           {/* <Route exact path="/" component={Home} /> */}

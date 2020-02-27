@@ -44,3 +44,7 @@ h {
   font-family: 'Patua One';
   marign-top: 30px;
 }
+
+span {
+  font-size: 1.25rem !important;
+}

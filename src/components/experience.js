@@ -1,5 +1,6 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
+import Card from '@material-ui/core/Card';
 
 const useStyles = makeStyles({
   logo: {
@@ -11,28 +12,30 @@ const useStyles = makeStyles({
     display: 'flex',
     flexDirection: 'column',
     alignItems: ' center',
-
+    opacity: 0.8,
+    background: 'red'
   },
   logoCon: {
     display: 'flex',
     flexDirection: 'row',
     justifyContent: 'center',
     width: 400,
-    flexWrap: 'wrap'
-
+    flexWrap: 'wrap',
+    opacity: 1
   },
   header: {
     fontSize: '2.8rem',
     fontFamily: 'Patua One',
     marignTop: 30,
-
+    opacity: 1,
+    color: "white",
   }
 });
 
 const Experience = props => {
   const classes = useStyles();
   return (
-    <div className={classes.main}>
+    <Card className={classes.main}>
       <h className={classes.header}>Skills</h>
       <div className={classes.logoCon}>
         <img
@@ -64,7 +67,7 @@ const Experience = props => {
           src="https://www.logolynx.com/images/logolynx/db/dbef5539884535031b032b49dcccf89e.png"
         />
       </div>
-    </div>
+    </Card>
   );
 };
 
