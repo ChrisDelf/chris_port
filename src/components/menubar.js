@@ -32,16 +32,16 @@ const CenteredTabs = props => {
         textColor="white"
         centered
       >
-        <Tab
-          label="Home"
-          onClick={() => {
-            history.push("/");
-          }}
-        />
+        {/* <Tab */}
+        {/*   label="Home" */}
+        {/*   onClick={() => { */}
+        {/*     history.push("/"); */}
+        {/*   }} */}
+        {/* /> */}
         <Tab
           label="About"
           onClick={() => {
-            history.push("/about");
+            history.push("/");
           }}
         />
         <Tab

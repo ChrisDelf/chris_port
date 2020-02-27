@@ -5,10 +5,22 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Carousel from 'react-bootstrap/Carousel';
 import './projects.css';
 import Button from '@material-ui/core/Button';
+import { makeStyles } from '@material-ui/core/styles';
+
+const useStyles = makeStyles({
+  header: {
+    fontSize: '2.8rem',
+    fontFamily: 'Patua One',
+    marignTop: 30,
+    opacity: 1,
+    color: "white",
+  }
+});
 
 const Projects = props => {
   const [index, setIndex] = useState(0);
   const [direction, setDirection] = useState(null);
+  const classes = useStyles();
 
   const handleSelect = (selectedIndex, e) => {
     setIndex(selectedIndex);
@@ -17,7 +29,7 @@ const Projects = props => {
 
   return (
     <div>
-      <h>Projects</h>
+      <h className={classes.header}>Projects</h>
       <Carousel
         activeIndex={index}
         direction={direction}

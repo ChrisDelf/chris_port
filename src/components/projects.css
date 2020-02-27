@@ -8,18 +8,20 @@
 
 .ant-carousel .slick-slide h3 {
   color: #fff;
-
+  font-size: 2.8rem;
+  font-family: 'Patua One';
+  marign-top: 30px;
 }
 
-.CardCon{
-  display:flex;
+.CardCon {
+  display: flex;
   flex-direction: row;
   /* justify-content: center; */
   height: 100%;
   width: 100%;
 }
 
-img{
+img {
   height: 600px;
   align-self: center;
 }
@@ -30,13 +32,19 @@ img{
 
 .ant-carousel .slick-slide div {
   display: flex;
-
 }
 
-.ButtonCon{
-  display:flex;
+.ButtonCon {
+  display: flex;
   flex-direction: row;
   justify-content: space-evenly;
 }
+h {
+  font-size: 2.8rem;
+  font-family: 'Patua One';
+  marign-top: 30px;
+}
 
-
+span {
+  font-size: 1.25rem !important;
+}

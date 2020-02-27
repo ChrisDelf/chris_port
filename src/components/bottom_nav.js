@@ -4,9 +4,14 @@ import BottomNavigation from '@material-ui/core/BottomNavigation';
 import BottomNavigationAction from '@material-ui/core/BottomNavigationAction';
 const useStyles = makeStyles({
   root: {
-    justiftyContent: "center"
-
-
+    justiftyContent: 'center',
+    background: 'Darkgreen',
+    color: 'white',
+    fontSize: '2rem'
+  },
+  action: {
+    color: 'white',
+    fontSize: '2rem'
   }
 });
 
@@ -22,11 +27,18 @@ export default function SimpleBottomNavigation() {
       }}
       showLabels
       className={classes.root}
-
     >
-      <BottomNavigationAction label="Recents" />
-      <BottomNavigationAction label="Favorites" />
-      <BottomNavigationAction label="Nearby" />
+      <BottomNavigationAction
+        className={classes.action}
+        label="GitHub"
+        href="https://github.com/ChrisDelf"
+      />
+      <BottomNavigationAction
+        className={classes.action}
+        label="Linkedin"
+        href="https://www.linkedin.com/in/chris-delfaus-61356986/"
+      />
+      <BottomNavigationAction className={classes.action} label="Resume" />
     </BottomNavigation>
   );
 }
