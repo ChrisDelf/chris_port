@@ -7,9 +7,11 @@ import CenteredTabs from './components/menubar';
 import Home from './components/home';
 import About from './components/about';
 import Projects from './components/projects';
-import Contacts from './components/contacts';
+import FormikContactForm from './components/contacts';
 import Experience from './components/experience';
 import SimpleBottomNavigation from './components/bottom_nav';
+import ParticlesBg from 'particles-bg';
+import { makeStyles } from '@material-ui/core/styles';
 
 export const theme = {
   primary: {
@@ -18,26 +20,37 @@ export const theme = {
     yellow: 'yellow'
   }
 };
+const useStyles = makeStyles({
+  backgound: {
+    top: 49
+  }
+});
+
 
 
 function App() {
-  let elem = document.getElementById('root')
-  elem.style.height = '100%'
+  const classes = useStyles();
+  let elem = document.getElementById('root');
+  elem.style.height = '100%';
+  let config = {
+    top: 42,
+  }
   return (
     <>
       <div className="App">
+        <ParticlesBg className= "aniBack" type="random" config = {config} bg={true}/>
         <Router>
           <CenteredTabs />
-          <Route exact path="/" component={Home} />
-          <Route path="/about" component={About} />
+          {/* <Route exact path="/" component={Home} /> */}
+          <Route exact path="/" component={About} />
           <Route path="/projects" component={Projects} />
-          <Route path="/contact" component={Contacts} />
+          <Route path="/contact" component={FormikContactForm} />
           <Route path="/experience" component={Experience} />
         </Router>
-    </div>
-    <footer>
-    <SimpleBottomNavigation />
-    </footer>
+      </div>
+      <footer>
+        <SimpleBottomNavigation />
+      </footer>
     </>
   );
 }

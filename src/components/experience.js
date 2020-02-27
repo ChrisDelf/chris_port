@@ -20,6 +20,12 @@ const useStyles = makeStyles({
     width: 400,
     flexWrap: 'wrap'
 
+  },
+  header: {
+    fontSize: '2.8rem',
+    fontFamily: 'Patua One',
+    marignTop: 30,
+
   }
 });
 
@@ -27,7 +33,7 @@ const Experience = props => {
   const classes = useStyles();
   return (
     <div className={classes.main}>
-      <h>Skills</h>
+      <h className={classes.header}>Skills</h>
       <div className={classes.logoCon}>
         <img
           className={classes.logo}
