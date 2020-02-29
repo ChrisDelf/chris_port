@@ -5,6 +5,7 @@ import * as Yup from 'yup';
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import Button from '@material-ui/core/Button';
+import ReactContactForm from 'react-mail-form';
 
 const useStyles = makeStyles({
   card: {
@@ -13,7 +14,6 @@ const useStyles = makeStyles({
     justifyContent: 'center',
     flexDirection: 'column',
     flexWrap: 'wrap',
-    marginTop: '300px',
     width: '400px'
   },
   media: {
@@ -33,11 +33,19 @@ const useStyles = makeStyles({
   },
   container2: {
     display: 'flex',
-    justifyContent: 'center'
+    justifyContent: 'center',
+    marginTop: 100
+
   },
   form: {
     display: 'flex',
     flexDirection: 'column'
+  },
+  header: {
+    fontSize: '2.8rem',
+    fontFamily: 'Patua One',
+    opacity: 1,
+    color: "white",
   }
 });
 
@@ -46,40 +54,45 @@ const Contacts = props => {
 
   return (
     <>
+    <h className = {classes.header}>Send me an message!</h>
       <div className={classes.container2}>
+        {/*     <Card className={classes.card}> */}
+        {/*       <h2>Contact Page</h2> */}
+        {/*       <Form className={classes.form}> */}
+        {/*         <label>Name</label> */}
+        {/*         <Field type="text" name="name" placeholder="Enter your name" /> */}
+        {/*         {props.touched.name && props.errors.name && ( */}
+        {/*           <p1 className={classes.error}>{props.errors.name}</p1> */}
+        {/*         )} */}
+        {/*         <label>Email</label> */}
+        {/*         <Field */}
+        {/*           type="email" */}
+        {/*           name="email" */}
+        {/*           placeholder="Enter your email" */}
+        {/*         /> */}
+        {/*         {props.touched.email && props.errors.email && ( */}
+        {/*           <p1 className={classes.error}>{props.errors.email}</p1> */}
+        {/*         )} */}
+        {/*         <label>Message</label> */}
+        {/*         <Field */}
+        {/*           type="message" */}
+        {/*           name="message" */}
+        {/*           placeholder="Message goes here" */}
+        {/*         /> */}
+        {/*         {props.touched.message && props.errors.message && ( */}
+        {/*           <p1 className={classes.error}>{props.errors.message}</p1> */}
+        {/*         )} */}
+        {/*  */}
+        {/*         <div className={classes.buttons}> */}
+        {/*           <Button className={classes.btn} type="submit"> */}
+        {/*             Send */}
+        {/*           </Button> */}
+        {/*         </div> */}
+        {/*       </Form> */}
+        {/*     </Card> */}
+    {/*   </div> */}
         <Card className={classes.card}>
-          <h2>Contact Page</h2>
-          <Form className={classes.form}>
-            <label>Name</label>
-            <Field type="text" name="name" placeholder="Enter your name" />
-            {props.touched.name && props.errors.name && (
-              <p1 className={classes.error}>{props.errors.name}</p1>
-            )}
-            <label>Email</label>
-            <Field
-              type="email"
-              name="email"
-              placeholder="Enter your email"
-            />
-            {props.touched.email && props.errors.email && (
-              <p1 className={classes.error}>{props.errors.email}</p1>
-            )}
-            <label>Message</label>
-            <Field
-              type="message"
-              name="message"
-              placeholder="Message goes here"
-            />
-            {props.touched.message && props.errors.message && (
-              <p1 className={classes.error}>{props.errors.message}</p1>
-            )}
-
-            <div className={classes.buttons}>
-              <Button className={classes.btn} type="submit">
-                Send
-              </Button>
-            </div>
-          </Form>
+          <ReactContactForm className={classes.card} to="creenoff@gmail.com" />
         </Card>
       </div>
     </>
