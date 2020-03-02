@@ -35,7 +35,6 @@ const useStyles = makeStyles({
     display: 'flex',
     justifyContent: 'center',
     marginTop: 100
-
   },
   form: {
     display: 'flex',
@@ -45,7 +44,7 @@ const useStyles = makeStyles({
     fontSize: '2.8rem',
     fontFamily: 'Patua One',
     opacity: 1,
-    color: "white",
+    color: 'white'
   }
 });
 
@@ -54,56 +53,58 @@ const Contacts = props => {
 
   return (
     <>
-    <h className = {classes.header}>Send me an message!</h>
+      <h className={classes.header}>Send me an message!</h>
       <div className={classes.container2}>
-        {/*     <Card className={classes.card}> */}
-        {/*       <h2>Contact Page</h2> */}
-        {/*       <Form className={classes.form}> */}
-        {/*         <label>Name</label> */}
-        {/*         <Field type="text" name="name" placeholder="Enter your name" /> */}
-        {/*         {props.touched.name && props.errors.name && ( */}
-        {/*           <p1 className={classes.error}>{props.errors.name}</p1> */}
-        {/*         )} */}
-        {/*         <label>Email</label> */}
-        {/*         <Field */}
-        {/*           type="email" */}
-        {/*           name="email" */}
-        {/*           placeholder="Enter your email" */}
-        {/*         /> */}
-        {/*         {props.touched.email && props.errors.email && ( */}
-        {/*           <p1 className={classes.error}>{props.errors.email}</p1> */}
-        {/*         )} */}
-        {/*         <label>Message</label> */}
-        {/*         <Field */}
-        {/*           type="message" */}
-        {/*           name="message" */}
-        {/*           placeholder="Message goes here" */}
-        {/*         /> */}
-        {/*         {props.touched.message && props.errors.message && ( */}
-        {/*           <p1 className={classes.error}>{props.errors.message}</p1> */}
-        {/*         )} */}
-        {/*  */}
-        {/*         <div className={classes.buttons}> */}
-        {/*           <Button className={classes.btn} type="submit"> */}
-        {/*             Send */}
-        {/*           </Button> */}
-        {/*         </div> */}
-        {/*       </Form> */}
-        {/*     </Card> */}
-    {/*   </div> */}
         <Card className={classes.card}>
-          <ReactContactForm className={classes.card} to="creenoff@gmail.com" />
+          <h2>Contact Page</h2>
+          <Form className={classes.form}>
+            <label>Name</label>
+            <Field type="text" name="name" placeholder="Enter your name" />
+            {props.touched.name && props.errors.name && (
+              <p1 className={classes.error}>{props.errors.name}</p1>
+            )}
+            <label>Email</label>
+            <Field type="email" name="email" placeholder="Enter your email" />
+            {props.touched.email && props.errors.email && (
+              <p1 className={classes.error}>{props.errors.email}</p1>
+            )}
+            <label>Phone</label>
+            <Field type="text" name="Phone" placeholder="Enter your phone #" />
+            {props.touched.phone && props.errors.phone && (
+              <p1 className={classes.error}>{props.errors.phone}</p1>
+            )}
+            <label>Message</label>
+            <Field
+              type="message"
+              name="message"
+              placeholder="Message goes here"
+            />
+            {props.touched.message && props.errors.message && (
+              <p1 className={classes.error}>{props.errors.message}</p1>
+            )}
+
+            <div className={classes.buttons}>
+              <Button className={classes.btn} type="submit">
+                Send
+              </Button>
+            </div>
+          </Form>
         </Card>
       </div>
+      {/* <Card className={classes.card}> */}
+      {/*   <ReactContactForm className={classes.card} to="ojoesd@gmail.com" /> */}
+      {/* </Card> */}
+      {/* </div> */}
     </>
   );
 };
 const FormikContactForm = withFormik({
-  mapPropsToValues({ name, email, message }) {
+  mapPropsToValues({ name, email, message, phone }) {
     return {
       name: '',
       email: '',
-      message: ''
+      message: '',
+      phone:'',
     };
   },
 
@@ -114,8 +115,10 @@ const FormikContactForm = withFormik({
   }),
 
   handleSubmit(values) {
+    console.log(values)
     axios
-      .post('http://localhost:7000/send')
+      .post('https://young-everglades-15927.herokuapp.com/send',
+        {values})
       .then(res => {
         console.log('res', res);
       })
@@ -124,3 +127,4 @@ const FormikContactForm = withFormik({
 })(Contacts);
 
 export default FormikContactForm;
+// export default Contacts;
