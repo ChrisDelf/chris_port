@@ -7,7 +7,6 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
-import { red } from '@material-ui/core/colors';
 const useStyles = makeStyles(theme => ({
   root: {
     maxWidth: 500,
@@ -15,10 +14,9 @@ const useStyles = makeStyles(theme => ({
     background: 'lightgreen',
     color: 'white',
     [theme.breakpoints.down('sm')]: {
-      backgroundColor: red[400],
       fontSize: '.7rem !important',
-      marginTop: 20,
-      margin:10
+      marginTop: 30,
+      margin: 10
     }
   },
   media: {

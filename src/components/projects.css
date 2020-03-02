@@ -45,6 +45,14 @@ h {
   marign-top: 30px;
 }
 
+label {
+  color: darkblue;
+  font-size: 1.1rem;
+  text-align: justify;
+}
+h2 {
+  color: white;
+}
 span {
   font-size: 1.25rem !important;
 }
