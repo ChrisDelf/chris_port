@@ -74,7 +74,7 @@ const Contacts = props => {
               <p1 className={classes.error}>{props.errors.email}</p1>
             )}
             <label>Phone</label>
-            <Field type="text" name="Phone" placeholder="Enter your phone #" />
+            <Field type="text" name="phone" placeholder="Enter your phone #" />
             {props.touched.phone && props.errors.phone && (
               <p1 className={classes.error}>{props.errors.phone}</p1>
             )}
