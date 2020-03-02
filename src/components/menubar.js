@@ -1,18 +1,30 @@
-import React, {useEffect} from 'react';
+import React, { useEffect } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import { borderColor } from '@material-ui/system';
-import {useHistory} from "react-router-dom";
-const useStyles = makeStyles({
+import { useHistory } from 'react-router-dom';
+import useMediaQuery from '@material-ui/core/useMediaQuery';
+import { red } from '@material-ui/core/colors';
+import './projects.css';
+const useStyles = makeStyles(theme => ({
   root: {
     flexGrow: 1,
     backgroundColor: 'green',
     color: 'white',
-    borderColor: 'brown'
+    borderColor: 'brown',
+    // [theme.breakpoints.down('sm')]: {
+    //   backgroundColor: red[400],
+    //   fontSize:'.7rem !important',
+    // },
+    tab: {
+      [theme.breakpoints.down('sm')]: {
+       fontSize:'.7rem !important',
+      }
+    }
   }
-});
+}));
 const CenteredTabs = props => {
   let history = useHistory();
   console.log(history);
@@ -21,7 +33,6 @@ const CenteredTabs = props => {
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
-
 
   return (
     <Paper className={classes.root}>
@@ -39,33 +50,36 @@ const CenteredTabs = props => {
         {/*   }} */}
         {/* /> */}
         <Tab
+          className={classes.tab}
           label="About"
           onClick={() => {
-            history.push("/");
+            history.push('/');
           }}
         />
         <Tab
           label="Experience"
           onClick={() => {
-            history.push("/experience");
+            history.push('/experience');
           }}
         />
 
         <Tab
+          className={classes.tab}
           label="Projects"
           onClick={() => {
-            history.push("/projects");
+            history.push('/projects');
           }}
         />
         <Tab
+          className={classes.tab}
           label="Contacts"
           onClick={() => {
-            history.push("/contact");
+            history.push('/contact');
           }}
         />
       </Tabs>
     </Paper>
   );
-}
+};
 
-  export default CenteredTabs
+export default CenteredTabs;

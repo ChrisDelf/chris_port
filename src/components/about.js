@@ -7,11 +7,19 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
-const useStyles = makeStyles({
+import { red } from '@material-ui/core/colors';
+const useStyles = makeStyles(theme => ({
   root: {
     maxWidth: 500,
     margin: 100,
-
+    background: 'lightgreen',
+    color: 'white',
+    [theme.breakpoints.down('sm')]: {
+      backgroundColor: red[400],
+      fontSize: '.7rem !important',
+      marginTop: 20,
+      margin:10
+    }
   },
   media: {
     height: 300
@@ -19,8 +27,11 @@ const useStyles = makeStyles({
   container: {
     display: 'flex',
     justifyContent: 'center'
+  },
+  p: {
+    color: 'darkblue'
   }
-});
+}));
 const About = props => {
   const classes = useStyles();
 
@@ -37,7 +48,12 @@ const About = props => {
             <Typography gutterBottom variant="h5" component="h2">
               Chris Delfaus
             </Typography>
-            <Typography variant="body2" color="textSecondary" component="p">
+            <Typography
+              className={classes.p}
+              variant="body2"
+              color="textSecondary"
+              component="p"
+            >
               I’m a web developer that loves using new technologies to create
               new things. I enjoy struggling through coding challenges and
               painting miniatures. The languages and libraries I have experience
@@ -47,11 +63,15 @@ const About = props => {
           </CardContent>
         </CardActionArea>
         <CardActions>
-          <Button size="small" color="primary">
-            Share
+          <Button
+            size="small"
+            color="primary"
+            href="https://www.linkedin.com/in/chris-delfaus-61356986/"
+          >
+            Linkein
           </Button>
           <Button size="small" color="primary">
-            Learn More
+            Resume
           </Button>
         </CardActions>
       </Card>
