@@ -5,7 +5,8 @@ import * as Yup from 'yup';
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import Button from '@material-ui/core/Button';
-import ReactContactForm from 'react-mail-form';
+import './projects.css';
+import TextArea from 'antd/lib/input/TextArea';
 
 const useStyles = makeStyles({
   card: {
@@ -14,7 +15,8 @@ const useStyles = makeStyles({
     justifyContent: 'center',
     flexDirection: 'column',
     flexWrap: 'wrap',
-    width: '400px'
+    width: '400px',
+    background: 'lightgreen'
   },
   media: {
     height: 200
@@ -45,6 +47,9 @@ const useStyles = makeStyles({
     fontFamily: 'Patua One',
     opacity: 1,
     color: 'white'
+  },
+  text: {
+    height: '200px'
   }
 });
 
@@ -53,7 +58,7 @@ const Contacts = props => {
 
   return (
     <>
-      <h className={classes.header}>Send me an message!</h>
+      <h className={classes.header}>Send me a email!</h>
       <div className={classes.container2}>
         <Card className={classes.card}>
           <h2>Contact Page</h2>
@@ -75,7 +80,9 @@ const Contacts = props => {
             )}
             <label>Message</label>
             <Field
-              type="message"
+              component="textarea"
+              className={classes.text}
+              type="text"
               name="message"
               placeholder="Message goes here"
             />
@@ -91,10 +98,6 @@ const Contacts = props => {
           </Form>
         </Card>
       </div>
-      {/* <Card className={classes.card}> */}
-      {/*   <ReactContactForm className={classes.card} to="ojoesd@gmail.com" /> */}
-      {/* </Card> */}
-      {/* </div> */}
     </>
   );
 };
@@ -104,7 +107,7 @@ const FormikContactForm = withFormik({
       name: '',
       email: '',
       message: '',
-      phone:'',
+      phone: ''
     };
   },
 
@@ -115,10 +118,9 @@ const FormikContactForm = withFormik({
   }),
 
   handleSubmit(values) {
-    console.log(values)
+    console.log(values);
     axios
-      .post('https://young-everglades-15927.herokuapp.com/send',
-        {values})
+      .post('https://young-everglades-15927.herokuapp.com/send', { values })
       .then(res => {
         console.log('res', res);
       })
