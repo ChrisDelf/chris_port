@@ -66,7 +66,7 @@ const About = props => {
             color="primary"
             href="https://www.linkedin.com/in/chris-delfaus-61356986/"
           >
-            Linkein
+            Linkedin
           </Button>
           <Button size="small" color="primary">
             Resume
