@@ -7,6 +7,9 @@ import Card from '@material-ui/core/Card';
 import Button from '@material-ui/core/Button';
 import './projects.css';
 import TextArea from 'antd/lib/input/TextArea';
+import { useAlert } from 'react-alert';
+
+
 
 const useStyles = makeStyles({
   card: {
@@ -53,8 +56,10 @@ const useStyles = makeStyles({
   }
 });
 
-const Contacts = props => {
+const Contacts = (props, {alert}) => {
   const classes = useStyles();
+  console.log(props)
+
 
   return (
     <>
@@ -122,9 +127,10 @@ const FormikContactForm = withFormik({
     axios
       .post('https://young-everglades-15927.herokuapp.com/send', { values })
       .then(res => {
+        alert('Message Was sent');
         console.log('res', res);
       })
-      .catch(err => console.log(err));
+      .catch(err => alert('Something went wrong'));
   }
 })(Contacts);
 
