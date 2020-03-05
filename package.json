@@ -13,6 +13,8 @@
     "formik": "^2.1.4",
     "particles-bg": "^2.4.7",
     "react": "^16.12.0",
+    "react-alert": "^6.0.0",
+    "react-alert-template-basic": "^1.0.0",
     "react-bootstrap": "^1.0.0-beta.16",
     "react-dom": "^16.12.0",
     "react-mail-form": "^2.1.0",

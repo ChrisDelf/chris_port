@@ -13,6 +13,7 @@ import SimpleBottomNavigation from './components/bottom_nav';
 import ParticlesBg from 'particles-bg';
 import { makeStyles } from '@material-ui/core/styles';
 import Contacts from './components/contacts';
+import {useAlert} from 'react-alert';
 
 export const theme = {
   primary: {
@@ -35,6 +36,7 @@ function App() {
   let config = {
     top: 42
   };
+
   return (
     <>
       <div className="App">
@@ -49,7 +51,7 @@ function App() {
           {/* <Route exact path="/" component={Home} /> */}
           <Route exact path="/" component={About} />
           <Route path="/projects" component={Projects} />
-          <Route path="/contact" component={FormikContactForm} />
+          <Route path="/contact" component={FormikContactForm}  />
           <Route path="/experience" component={Experience} />
         </Router>
       </div>

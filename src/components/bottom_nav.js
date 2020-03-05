@@ -38,7 +38,7 @@ export default function SimpleBottomNavigation() {
         label="Linkedin"
         href="https://www.linkedin.com/in/chris-delfaus-61356986/"
       />
-      <BottomNavigationAction className={classes.action} label="Resume" />
+      <BottomNavigationAction className={classes.action} label="Resume" href = "https://drive.google.com/file/d/1-X-HyruqOOHGikWSLoE8UuV3j0Fy8qZr/view?usp=sharing" />
     </BottomNavigation>
   );
 }
