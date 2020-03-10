@@ -57,9 +57,9 @@ const CenteredTabs = props => {
           }}
         />
         <Tab
-          label="Experience"
+          label="Skills"
           onClick={() => {
-            history.push('/experience');
+            history.push('/skills');
           }}
         />
 
