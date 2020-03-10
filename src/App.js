@@ -42,7 +42,7 @@ function App() {
       <div className="App">
         <ParticlesBg
           className="aniBack"
-          type="thick"
+          type="cobweb"
           config={config}
           bg={true}
         />
@@ -52,7 +52,7 @@ function App() {
           <Route exact path="/" component={About} />
           <Route path="/projects" component={Projects} />
           <Route path="/contact" component={FormikContactForm}  />
-          <Route path="/experience" component={Experience} />
+          <Route path="/skills" component={Experience} />
         </Router>
       </div>
       <footer>

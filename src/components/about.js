@@ -28,6 +28,9 @@ const useStyles = makeStyles(theme => ({
   },
   p: {
     color: 'darkblue'
+  },
+  buttonCon: {
+    justifyContent: 'center'
   }
 }));
 const About = props => {
@@ -60,7 +63,7 @@ const About = props => {
             </Typography>
           </CardContent>
         </CardActionArea>
-        <CardActions>
+        <CardActions className={classes.buttonCon}>
           <Button
             size="small"
             color="primary"
@@ -68,7 +71,11 @@ const About = props => {
           >
             Linkedin
           </Button>
-          <Button size="small" color="primary">
+          <Button
+            size="small"
+            color="primary"
+            href="https://drive.google.com/file/d/1-X-HyruqOOHGikWSLoE8UuV3j0Fy8qZr/view?usp=sharing"
+          >
             Resume
           </Button>
         </CardActions>
