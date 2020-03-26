@@ -13,7 +13,7 @@ import SimpleBottomNavigation from './components/bottom_nav';
 import ParticlesBg from 'particles-bg';
 import { makeStyles } from '@material-ui/core/styles';
 import Contacts from './components/contacts';
-import {useAlert} from 'react-alert';
+import { useAlert } from 'react-alert';
 
 export const theme = {
   primary: {
@@ -34,7 +34,8 @@ function App() {
   let elem = document.getElementById('root');
   elem.style.height = '100%';
   let config = {
-    top: 42
+    top: 42,
+    color: "white"
   };
 
   return (
@@ -43,7 +44,8 @@ function App() {
         <ParticlesBg
           className="aniBack"
           type="cobweb"
-          config={config}
+         color="#EAEDED"
+
           bg={true}
         />
         <Router>
@@ -51,7 +53,7 @@ function App() {
           {/* <Route exact path="/" component={Home} /> */}
           <Route exact path="/" component={About} />
           <Route path="/projects" component={Projects} />
-          <Route path="/contact" component={FormikContactForm}  />
+          <Route path="/contact" component={FormikContactForm} />
           <Route path="/skills" component={Experience} />
         </Router>
       </div>
