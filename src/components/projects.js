@@ -13,7 +13,7 @@ const useStyles = makeStyles({
     fontFamily: 'Patua One',
     marignTop: 30,
     opacity: 1,
-    color: "white",
+    color: 'white'
   }
 });
 
@@ -48,7 +48,10 @@ const Projects = props => {
               management and designed with the pricelineone design system. The
               back-end is running on Node.js and Express with a PostgrSQL
               database. The interaction between mothers and drivers is handled
-              via the FrontlineSMS app for all SMS communications.
+              via the FrontlineSMS app for all SMS communications. My
+              contribution to this project connecting FrontLimeSMS to our
+              Node.js server. Also, created a script that periodically checks
+              the databasefor rides that need to be reassigned.
             </p>
             <div className="ButtonCon">
               <Button
@@ -93,7 +96,8 @@ const Projects = props => {
               Working with a team of data scientists and a back-end developer.
               I, along with 2 other front end developers, help create a
               front-end that allows users to sign-up and vote on which stars are
-              most likely to have planets orbiting them.
+              most likely to have planets orbiting them.My main contribution to project was
+              implementing a state management system
             </p>
             <div className="ButtonCon">
               <Button
