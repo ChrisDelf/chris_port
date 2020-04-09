@@ -40,10 +40,10 @@ const About = props => {
     <div className={classes.container}>
       <Card className={classes.root}>
         <CardActionArea>
-          <CardMedia
+          <img
             className={classes.media}
-            image="https://avatars1.githubusercontent.com/u/51103329?s=460&v=4"
-            title="Contemplative Reptile"
+            src={require('../images/fishing.png')}
+            title="picture of fishing"
           />
           <CardContent>
             <Typography gutterBottom variant="h5" component="h2">
@@ -74,7 +74,7 @@ const About = props => {
           <Button
             size="small"
             color="primary"
-            href="https://drive.google.com/file/d/1-X-HyruqOOHGikWSLoE8UuV3j0Fy8qZr/view?usp=sharing"
+            href="https://www.canva.com/design/DAD2EE2Az5c/Dk9N0Q3Xc_Z5hkCn3TFDqQ/view?utm_content=DAD2EE2Az5c&utm_campaign=designshare&utm_medium=link&utm_source=sharebutton"
           >
             Resume
           </Button>

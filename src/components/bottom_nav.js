@@ -62,7 +62,7 @@ export default function SimpleBottomNavigation() {
           className={classes.action}
           size="small"
           color="primary"
-          href="https://drive.google.com/file/d/1-X-HyruqOOHGikWSLoE8UuV3j0Fy8qZr/view?usp=sharing"
+          href="https://www.canva.com/design/DAD2EE2Az5c/Dk9N0Q3Xc_Z5hkCn3TFDqQ/view?utm_content=DAD2EE2Az5c&utm_campaign=designshare&utm_medium=link&utm_source=sharebutton"
         >
           Resume
         </Button>

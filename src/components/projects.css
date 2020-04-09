@@ -38,11 +38,17 @@ img {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
+
 }
 h {
   font-size: 2.8rem;
   font-family: 'Patua One';
   marign-top: 30px;
+}
+
+.carousel-caption{
+  background: rgb(63, 191, 191);
+  border-radius: 20px;
 }
 
 label {
@@ -60,4 +66,8 @@ span {
   span {
     font-size: 1rem !important;
   }
+}
+
+Caption{
+  background: "teal";
 }

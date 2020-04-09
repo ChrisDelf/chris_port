@@ -72,7 +72,7 @@ const CenteredTabs = props => {
         />
         <Tab
           className={classes.tab}
-          label="Contacts"
+          label="Contact"
           onClick={() => {
             history.push('/contact');
           }}
