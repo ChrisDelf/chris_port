@@ -7,12 +7,13 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
+import './projects.css';
 const useStyles = makeStyles(theme => ({
   root: {
     maxWidth: 500,
     margin: 100,
-    background: 'lightgreen',
-    color: 'white',
+    background: 'white',
+    color: 'black',
     [theme.breakpoints.down('sm')]: {
       fontSize: '.7rem !important',
       marginTop: 30,
@@ -20,17 +21,27 @@ const useStyles = makeStyles(theme => ({
     }
   },
   media: {
-    height: 300
+    height: 300,
+    marginTop: 20
   },
   container: {
     display: 'flex',
     justifyContent: 'center'
   },
   p: {
-    color: 'darkblue'
+    color: 'black'
+  }
+  ,
+  h2: {
+    color: 'black',
+    fontSize: "1.5rem"
+    ,
   },
   buttonCon: {
     justifyContent: 'center'
+  },
+  imgCon: {
+    marginTop: 20,
   }
 }));
 const About = props => {
@@ -46,7 +57,7 @@ const About = props => {
             title="picture of fishing"
           />
           <CardContent>
-            <Typography gutterBottom variant="h5" component="h2">
+            <Typography gutterBottom variant="h5" component="h2" className = {classes.h2}>
               Chris Delfaus
             </Typography>
             <Typography
@@ -66,14 +77,14 @@ const About = props => {
         <CardActions className={classes.buttonCon}>
           <Button
             size="small"
-            color="primary"
+            color="black"
             href="https://www.linkedin.com/in/chris-delfaus-61356986/"
           >
             Linkedin
           </Button>
           <Button
             size="small"
-            color="primary"
+            color="black"
             href="https://www.canva.com/design/DAD2EE2Az5c/Dk9N0Q3Xc_Z5hkCn3TFDqQ/view?utm_content=DAD2EE2Az5c&utm_campaign=designshare&utm_medium=link&utm_source=sharebutton"
           >
             Resume

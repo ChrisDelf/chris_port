@@ -54,7 +54,7 @@ function App() {
           <Route exact path="/" component={About} />
           <Route path="/projects" component={Projects} />
           <Route path="/contact" component={FormikContactForm} />
-          <Route path="/skills" component={Experience} />
+          {/* <Route path="/skills" component={Experience} /> */}
         </Router>
       </div>
       <footer>
