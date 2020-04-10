@@ -81,7 +81,7 @@ const Projects = props => {
           />
 
           <Carousel.Caption>
-            <h3>Dungeon Expolrer </h3>
+            <h3>Dungeon Explorer </h3>
             <p>
               Created a Java Spring Boot application using Oauth2
               authentication, and 2h database. The app generates a 2d grid that
@@ -119,7 +119,7 @@ const Projects = props => {
               Working with a team of data scientists and a back-end developer.
               I, along with 2 other front end developers, help create a
               front-end that allows users to sign-up and vote on which stars are
-              most likely to have planets orbiting them.My main contribution to
+              most likely to have planets orbiting them. My main contribution to
               project was implementing a state management system, and handling the storage images.
             </p>
             <div className="ButtonCon">
