@@ -53,14 +53,23 @@ h {
 }
 
 .carousel-caption{
-  background: rgb(63, 191, 191);
+  background: rgb(0, 0, 0);
   border-radius: 20px;
   width: 80%;
   left: 10.4% !important;
   display: flex;
   flex-direction: column;
   align-items: center;
+  opacity: 70%;
+
 }
+
+p{
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+
 .carousel{
   interval: 10000;
   width: 80%;
@@ -77,6 +86,7 @@ label {
 }
 h2 {
   color: white;
+  font-size: 1.5rem;
 }
 span {
   font-size: 1.25rem !important;
@@ -93,8 +103,11 @@ span {
   left: none;
 }
 
+
 }
 
 Caption{
-  background: "teal";
+  background: "black";
+  opacity: 70%;
+
 }

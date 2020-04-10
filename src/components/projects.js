@@ -50,8 +50,8 @@ const Projects = props => {
               back-end is running on Node.js and Express with a PostgrSQL
               database. The interaction between mothers and drivers is handled
               via the FrontlineSMS app for all SMS communications. My
-              contribution to this project connecting FrontLimeSMS to our
-              Node.js server. Also,I created a script that periodically checks
+              contribution to this project was connecting FrontLimeSMS to our
+              Node.js server. Also, I created a script that periodically checks
               the database for rides that need to be reassigned a new driver after
               the assigned driver fails to response after 5 minutes.
             </p>

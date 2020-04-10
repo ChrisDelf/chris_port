@@ -9,12 +9,12 @@ import BottomNavigationAction from '@material-ui/core/BottomNavigationAction';
 const useStyles = makeStyles({
   root: {
     justiftyContent: 'center',
-    background: 'Darkgreen',
-    color: 'white',
+    background: 'white',
+    color: 'black',
     fontSize: '2rem'
   },
   action: {
-    color: 'white',
+    color: 'black',
     fontSize: '2rem'
   }
 });

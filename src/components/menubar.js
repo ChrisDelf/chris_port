@@ -11,8 +11,8 @@ import './projects.css';
 const useStyles = makeStyles(theme => ({
   root: {
     flexGrow: 1,
-    backgroundColor: 'green',
-    color: 'white',
+    backgroundColor: 'white',
+    color: 'black',
     borderColor: 'brown',
     // [theme.breakpoints.down('sm')]: {
     //   backgroundColor: red[400],
@@ -56,12 +56,12 @@ const CenteredTabs = props => {
             history.push('/');
           }}
         />
-        <Tab
-          label="Skills"
-          onClick={() => {
-            history.push('/skills');
-          }}
-        />
+        {/* <Tab */}
+        {/*   label="Skills" */}
+        {/*   onClick={() => { */}
+        {/*     history.push('/skills'); */}
+        {/*   }} */}
+        {/* /> */}
 
         <Tab
           className={classes.tab}
