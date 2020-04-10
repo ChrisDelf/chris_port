@@ -63,7 +63,7 @@ const Contacts = (props, {alert}) => {
 
   return (
     <>
-      <h className={classes.header}>Send me an email!</h>
+      <h className={classes.header}></h>
       <div className={classes.container2}>
         <Card className={classes.card}>
           <h2>Contact Page</h2>
