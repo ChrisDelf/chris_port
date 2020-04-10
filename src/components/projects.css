@@ -38,7 +38,13 @@ img {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
+  width: 70%;
 
+}
+.carouselCon{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 h {
   font-size: 2.8rem;
@@ -48,6 +54,19 @@ h {
 
 .carousel-caption{
   background: rgb(63, 191, 191);
+  border-radius: 20px;
+  width: 80%;
+  left: 10.4% !important;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.carousel{
+  interval: 10000;
+  width: 80%;
+}
+
+.carousel-inner{
   border-radius: 20px;
 }
 
@@ -64,8 +83,16 @@ span {
 }
 @media (max-width: 600px) {
   span {
-    font-size: 1rem !important;
+    font-size: .8rem !important;
   }
+  .carousel{
+    width: 90%;
+  }
+.carousel-caption{
+
+  left: none;
+}
+
 }
 
 Caption{

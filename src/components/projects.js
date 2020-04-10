@@ -28,12 +28,13 @@ const Projects = props => {
   };
 
   return (
-    <div>
+    <div className = "carouselCon">
       <h className={classes.header}>Projects</h>
       <Carousel
         activeIndex={index}
         direction={direction}
         onSelect={handleSelect}
+        interval={15000}
       >
         <Carousel.Item>
           <img
@@ -41,36 +42,34 @@ const Projects = props => {
             src={require('../images/scenic-view-of-mountains-during-dawn-1266810.jpg')}
             alt="Image of road next to a Ugandan lake"
           />
-          <Carousel.Caption >
-            <div className="capCon">
-              <h3>Safe-Mothers-Uganda</h3>
-              <p>
-                This application is a React front-end with a Redux state
-                management and designed with the pricelineone design system. The
-                back-end is running on Node.js and Express with a PostgrSQL
-                database. The interaction between mothers and drivers is handled
-                via the FrontlineSMS app for all SMS communications. My
-                contribution to this project connecting FrontLimeSMS to our
-                Node.js server. Also, created a script that periodically checks
-                the database for rides that need to be reassigned new driver
-                after they fail to response after 5 minutes.
-              </p>
-              <div className="ButtonCon">
-                <Button
-                  color="#e3dac9"
-                  variant="contained"
-                  href="https://github.com/Lambda-School-Labs/safe-mothers-be"
-                >
-                  GitHub
-                </Button>
-                <Button
-                  color="#e3dac9"
-                  variant="contained"
-                  href="https://www.youtube.com/watch?v=KM4jNYUOg7Y&t=8s"
-                >
-                  Demonstration Link
-                </Button>
-              </div>
+          <Carousel.Caption>
+            <h3>Safe-Mothers-Uganda</h3>
+            <p>
+              This application is a React front-end with a Redux state
+              management and designed with the pricelineone design system. The
+              back-end is running on Node.js and Express with a PostgrSQL
+              database. The interaction between mothers and drivers is handled
+              via the FrontlineSMS app for all SMS communications. My
+              contribution to this project connecting FrontLimeSMS to our
+              Node.js server. Also,I created a script that periodically checks
+              the database for rides that need to be reassigned a new driver after
+              the assigned driver fails to response after 5 minutes.
+            </p>
+            <div className="ButtonCon">
+              <Button
+                color="#e3dac9"
+                variant="contained"
+                href="https://github.com/Lambda-School-Labs/safe-mothers-be"
+              >
+                GitHub
+              </Button>
+              <Button
+                color="#e3dac9"
+                variant="contained"
+                href="https://www.youtube.com/watch?v=KM4jNYUOg7Y&t=8s"
+              >
+                Demo Link
+              </Button>
             </div>
           </Carousel.Caption>
         </Carousel.Item>
@@ -82,7 +81,7 @@ const Projects = props => {
           />
 
           <Carousel.Caption>
-            <h3>Dungeon Expoler </h3>
+            <h3>Dungeon Expolrer </h3>
             <p>
               Created a Java Spring Boot application using Oauth2
               authentication, and 2h database. The app generates a 2d grid that
@@ -100,9 +99,9 @@ const Projects = props => {
               <Button
                 color="#e3dac9"
                 variant="contained"
-                href="https://www.youtube.com/watch?v=KM4jNYUOg7Y&t=8s"
+                href=""
               >
-                Demonstration Link
+                Demon Link
               </Button>
             </div>
           </Carousel.Caption>
@@ -121,7 +120,7 @@ const Projects = props => {
               I, along with 2 other front end developers, help create a
               front-end that allows users to sign-up and vote on which stars are
               most likely to have planets orbiting them.My main contribution to
-              project was implementing a state management system
+              project was implementing a state management system, and handling the storage images.
             </p>
             <div className="ButtonCon">
               <Button
@@ -136,7 +135,7 @@ const Projects = props => {
                 variant="contained"
                 href="https://findingplanets.netlify.com/"
               >
-                Demonstration Link
+                Demo Link
               </Button>
             </div>
           </Carousel.Caption>

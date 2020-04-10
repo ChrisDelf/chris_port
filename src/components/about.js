@@ -58,7 +58,7 @@ const About = props => {
               I’m a web developer that loves using new technologies to create
               new things. I enjoy struggling through coding challenges and
               painting miniatures. The languages and libraries I have experience
-              with are Node.js,Reactjs, Postgres, Python, Flask, Java, and
+              with are Node.js,React.js, Postgres, Python, Flask, Java, and
               Django.
             </Typography>
           </CardContent>
