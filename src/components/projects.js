@@ -28,7 +28,7 @@ const Projects = props => {
   };
 
   return (
-    <div className = "carouselCon">
+    <div className="carouselCon">
       <h className={classes.header}>Projects</h>
       <Carousel
         activeIndex={index}
@@ -50,11 +50,15 @@ const Projects = props => {
               back-end is running on Node.js and Express with a PostgrSQL
               database. The interaction between mothers and drivers is handled
               via the FrontlineSMS app for all SMS communications. My
-              contribution to this project was connecting FrontLimeSMS to our
+              contribution to this project was connecting FrontLineSMS to our
               Node.js server. Also, I created a script that periodically checks
-              the database for rides that need to be reassigned a new driver after
-              the assigned driver fails to response after 5 minutes.
+              the database for rides that need to be reassigned a new driver
+              after the assigned driver fails to response after 5 minutes.
             </p>
+            <p>
+              Tech: React, Node.js, Express, PostgrSQL, Redux, FrontLineSMS{' '}
+            </p>
+
             <div className="ButtonCon">
               <Button
                 color="#e3dac9"
@@ -88,6 +92,7 @@ const Projects = props => {
               has randomly generated rooms that are connect to each other. Users
               can move around explore these room.
             </p>
+            <p>Tech: React,Java, H2database, Redux</p>
             <div className="ButtonCon">
               <Button
                 color="#e3dac9"
@@ -96,11 +101,7 @@ const Projects = props => {
               >
                 GitHub
               </Button>
-              <Button
-                color="#e3dac9"
-                variant="contained"
-                href=""
-              >
+              <Button color="#e3dac9" variant="contained" href="">
                 Demon Link
               </Button>
             </div>
@@ -120,8 +121,10 @@ const Projects = props => {
               I, along with 2 other front end developers, help create a
               front-end that allows users to sign-up and vote on which stars are
               most likely to have planets orbiting them. My main contribution to
-              project was implementing a state management system, and handling the storage images.
+              project was implementing a state management system, and handling
+              the storage images.
             </p>
+            <p>Tech: React, Redux, Formik</p>
             <div className="ButtonCon">
               <Button
                 color="#e3dac9"
