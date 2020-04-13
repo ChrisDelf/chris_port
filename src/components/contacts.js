@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Form, Field, withFormik } from 'formik';
 import * as Yup from 'yup';
@@ -8,8 +8,6 @@ import Button from '@material-ui/core/Button';
 import './projects.css';
 import TextArea from 'antd/lib/input/TextArea';
 import { useAlert } from 'react-alert';
-
-
 
 const useStyles = makeStyles({
   card: {
@@ -56,58 +54,75 @@ const useStyles = makeStyles({
     height: '200px'
   },
   h2: {
-    color: "black"
-
+    color: 'black'
   }
 });
 
-const Contacts = (props, {alert}) => {
-  const classes = useStyles();
-  console.log(props)
+const Contacts = props => {
+  const classes = useStyles(); // props.setStatus({success: false})
+  // console.log(props.status)
+  // setSuccessM = props.status.success
 
-
+  // const { setStatus, status } = props;
+  // useEffect(() => {
+  //   setStatus({ success: false });
+  // }, []);
+  // if ( status !== undefined) {
+  //   debugger
+  // }
+  // console.log(!status === undefined && status.success === false, 'hello');
   return (
     <>
       <h className={classes.header}></h>
-      <div className={classes.container2}>
-        <Card className={classes.card}>
-          <h2 className = {classes.h2}>Contact Page</h2>
-          <Form className={classes.form}>
-            <label className = {classes.h2}>Name</label>
-            <Field type="text" name="name" placeholder="Enter your name" />
-            {props.touched.name && props.errors.name && (
-              <p1 className={classes.error}>{props.errors.name}</p1>
-            )}
-            <label className = {classes.h2}>Email</label>
-            <Field type="email" name="email" placeholder="Enter your email" />
-            {props.touched.email && props.errors.email && (
-              <p1 className={classes.error}>{props.errors.email}</p1>
-            )}
-            <label className = {classes.h2}>Phone</label>
-            <Field type="text" name="phone" placeholder="Enter your phone #" />
-            {props.touched.phone && props.errors.phone && (
-              <p1 className={classes.error}>{props.errors.phone}</p1>
-            )}
-            <label className = {classes.h2}>Message</label>
-            <Field
-              component="textarea"
-              className={classes.text}
-              type="text"
-              name="message"
-              placeholder="Message goes here"
-            />
-            {props.touched.message && props.errors.message && (
-              <p1 className={classes.error}>{props.errors.message}</p1>
-            )}
+      {/* {!status === undefined && status.success === false ? ( */}
+        <div className={classes.container2}>
+          <Card className={classes.card}>
+            <h2 className={classes.h2}>Contact Page</h2>
+            <Form className={classes.form}>
+              <label className={classes.h2}>Name</label>
+              <Field type="text" name="name" placeholder="Enter your name" />
+              {props.touched.name && props.errors.name && (
+                <p1 className={classes.error}>{props.errors.name}</p1>
+              )}
+              <label className={classes.h2}>Email</label>
+              <Field type="email" name="email" placeholder="Enter your email" />
+              {props.touched.email && props.errors.email && (
+                <p1 className={classes.error}>{props.errors.email}</p1>
+              )}
+              <label className={classes.h2}>Phone</label>
+              <Field
+                type="text"
+                name="phone"
+                placeholder="Enter your phone #"
+              />
+              {props.touched.phone && props.errors.phone && (
+                <p1 className={classes.error}>{props.errors.phone}</p1>
+              )}
+              <label className={classes.h2}>Message</label>
+              <Field
+                component="textarea"
+                className={classes.text}
+                type="text"
+                name="message"
+                placeholder="Message goes here"
+              />
+              {props.touched.message && props.errors.message && (
+                <p1 className={classes.error}>{props.errors.message}</p1>
+              )}
 
-            <div className={classes.buttons}>
-              <Button className={classes.btn} type="submit">
-                Send
-              </Button>
-            </div>
-          </Form>
-        </Card>
-      </div>
+              <div className={classes.buttons}>
+                <Button className={classes.btn} type="submit">
+                  Send
+                </Button>
+              </div>
+            </Form>
+          </Card>
+        </div>
+      {/* ) : ( */}
+      {/*   <Card className={classes.card}> */}
+      {/*     <h2 className={classes.h2}>Email has been sent !</h2> */}
+      {/*   </Card> */}
+      {/* )} */}
     </>
   );
 };
@@ -127,15 +142,18 @@ const FormikContactForm = withFormik({
     message: Yup.string().required('Type a message to send')
   }),
 
-  handleSubmit(values) {
-    console.log(values);
+  handleSubmit(values, { setStatus, resetForm }) {
     axios
+      // .post('http://localhost:7000/send', { values })
       .post('https://young-everglades-15927.herokuapp.com/send', { values })
       .then(res => {
         alert('Message Was sent');
+        // console.log(props)
+        // setStatus({ success: true });
+        resetForm();
         console.log('res', res);
       })
-      .catch(err => alert(err));
+      .catch(err => console.log('err', err));
   }
 })(Contacts);
 
