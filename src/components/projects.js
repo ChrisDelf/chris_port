@@ -34,7 +34,7 @@ const Projects = props => {
         activeIndex={index}
         direction={direction}
         onSelect={handleSelect}
-        interval={15000}
+        interval={15000}_
       >
         <Carousel.Item>
           <img
@@ -42,7 +42,7 @@ const Projects = props => {
             src={require('../images/scenic-view-of-mountains-during-dawn-1266810.jpg')}
             alt="Image of road next to a Ugandan lake"
           />
-          <div className = "carousel-caption">
+          <Carousel.Caption className = "d-block">
             <h3>Safe-Mothers-Uganda</h3>
             <p>
               This application is a React front-end with a Redux state
@@ -75,7 +75,7 @@ const Projects = props => {
                 Demo Link
               </Button>
             </div>
-          </div>
+          </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
           <img
@@ -84,7 +84,7 @@ const Projects = props => {
             alt="Image of caves on a cliff face"
           />
 
-          <Carousel.Caption className = "carousel-caption">
+          <Carousel.Caption className = "d-block">
             <h3>Dungeon Explorer </h3>
             <p>
               Created a Java Spring Boot application using Oauth2
@@ -114,7 +114,7 @@ const Projects = props => {
             alt="Image of the miklyway"
           />
 
-          <Carousel.Caption className = "carousel-caption">
+          <Carousel.Caption className = "d-block">
             <h3>Finding Planets</h3>
             <p>
               Working with a team of data scientists and a back-end developer.
