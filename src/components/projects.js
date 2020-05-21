@@ -12,7 +12,7 @@ const useStyles = makeStyles({
     fontSize: '2.8rem',
     fontFamily: 'Patua One',
     marignTop: 30,
-    opacity: 80,
+    opacity: 100,
     color: 'white'
   }
 });
@@ -42,7 +42,7 @@ const Projects = props => {
             src={require('../images/scenic-view-of-mountains-during-dawn-1266810.jpg')}
             alt="Image of road next to a Ugandan lake"
           />
-          <Carousel.Caption>
+          <Carousel.Caption className = "caption">
             <h3>Safe-Mothers-Uganda</h3>
             <p>
               This application is a React front-end with a Redux state
@@ -84,7 +84,7 @@ const Projects = props => {
             alt="Image of caves on a cliff face"
           />
 
-          <Carousel.Caption>
+          <Carousel.Caption className = "caption">
             <h3>Dungeon Explorer </h3>
             <p>
               Created a Java Spring Boot application using Oauth2
@@ -105,7 +105,7 @@ const Projects = props => {
                 Demon Link
               </Button>
             </div>
-          </Carousel.Caption>
+          </Carousel.Caption >
         </Carousel.Item>
         <Carousel.Item>
           <img
@@ -114,7 +114,7 @@ const Projects = props => {
             alt="Image of the miklyway"
           />
 
-          <Carousel.Caption>
+          <Carousel.Caption className = "caption">
             <h3>Finding Planets</h3>
             <p>
               Working with a team of data scientists and a back-end developer.
