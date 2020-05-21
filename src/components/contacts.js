@@ -63,18 +63,23 @@ const Contacts = props => {
   // console.log(props.status)
   // setSuccessM = props.status.success
 
-  // const { setStatus, status } = props;
-  // useEffect(() => {
-  //   setStatus({ success: false });
-  // }, []);
-  // if ( status !== undefined) {
-  //   debugger
-  // }
-  // console.log(!status === undefined && status.success === false, 'hello');
+  const { setStatus, status } = props;
+  useEffect(() => {
+    console.log("inside of use effect")
+    setStatus({ success: false });
+
+  }, []);
+  if ( status !== undefined) {
+    console.log(status.success, "status inside useeffect")
+  debugger
+
+  }
+
+  console.log(!status === undefined && status.success === false, 'hello');
   return (
     <>
       <h className={classes.header}></h>
-      {/* {!status === undefined && status.success === false ? ( */}
+      {/* {status === false ? ( */}
         <div className={classes.container2}>
           <Card className={classes.card}>
             <h2 className={classes.h2}>Contact Page</h2>
@@ -119,9 +124,9 @@ const Contacts = props => {
           </Card>
         </div>
       {/* ) : ( */}
-      {/*   <Card className={classes.card}> */}
-      {/*     <h2 className={classes.h2}>Email has been sent !</h2> */}
-      {/*   </Card> */}
+        {/* <Card className={classes.card}> */}
+        {/*   <h2 className={classes.h2}>Email has been sent !</h2> */}
+        {/* </Card> */}
       {/* )} */}
     </>
   );
@@ -144,12 +149,12 @@ const FormikContactForm = withFormik({
 
   handleSubmit(values, { setStatus, resetForm }) {
     axios
-      // .post('http://localhost:7000/send', { values })
-      .post('https://young-everglades-15927.herokuapp.com/send', { values })
+      .post('http://localhost:7000/send', { values })
+      // .post('https://young-everglades-15927.herokuapp.com/send', { values })
       .then(res => {
         alert('Message Was sent');
         // console.log(props)
-        // setStatus({ success: true });
+        setStatus({ success: true });
         resetForm();
         console.log('res', res);
       })
