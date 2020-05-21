@@ -12,7 +12,7 @@ const useStyles = makeStyles({
     fontSize: '2.8rem',
     fontFamily: 'Patua One',
     marignTop: 30,
-    opacity: 1,
+    opacity: 80,
     color: 'white'
   }
 });
