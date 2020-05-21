@@ -42,7 +42,7 @@ const Projects = props => {
             src={require('../images/scenic-view-of-mountains-during-dawn-1266810.jpg')}
             alt="Image of road next to a Ugandan lake"
           />
-          <Carousel.Caption className = "carousel-caption">
+          <div className = "carousel-caption">
             <h3>Safe-Mothers-Uganda</h3>
             <p>
               This application is a React front-end with a Redux state
@@ -75,7 +75,7 @@ const Projects = props => {
                 Demo Link
               </Button>
             </div>
-          </Carousel.Caption>
+          </div>
         </Carousel.Item>
         <Carousel.Item>
           <img
