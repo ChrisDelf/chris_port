@@ -1,8 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import logo from './logo.svg';
 import './App.css';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import {BrowserRouter as Router, Route} from 'react-router-dom';
 import CenteredTabs from './components/menubar';
 import Home from './components/home';
 import About from './components/about';
@@ -11,22 +10,22 @@ import FormikContactForm from './components/contacts';
 import Experience from './components/experience';
 import SimpleBottomNavigation from './components/bottom_nav';
 import ParticlesBg from 'particles-bg';
-import { makeStyles } from '@material-ui/core/styles';
+import {makeStyles} from '@material-ui/core/styles';
 import Contacts from './components/contacts';
-import { useAlert } from 'react-alert';
+import {useAlert} from 'react-alert';
 
 export const theme = {
   primary: {
     green: 'green',
     brown: 'brown',
-    yellow: 'yellow'
-  }
+    yellow: 'yellow',
+  },
 };
 const useStyles = makeStyles({
   backgound: {
     top: 49,
-    backgoundColor: 'white'
-  }
+    backgoundColor: 'white',
+  },
 });
 
 function App() {
@@ -35,7 +34,7 @@ function App() {
   elem.style.height = '100%';
   let config = {
     top: 42,
-    color: "white"
+    color: 'white',
   };
 
   return (
@@ -44,8 +43,7 @@ function App() {
         <ParticlesBg
           className="aniBack"
           type="cobweb"
-         color="#EAEDED"
-
+          color="#EAEDED"
           bg={true}
         />
         <Router>
