@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 
 // import { Carousel } from 'antd';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Carousel from 'react-bootstrap/Carousel';
 import './projects.css';
 import Button from '@material-ui/core/Button';
-import { makeStyles } from '@material-ui/core/styles';
+import {makeStyles} from '@material-ui/core/styles';
 
 const useStyles = makeStyles({
   header: {
@@ -13,8 +13,8 @@ const useStyles = makeStyles({
     fontFamily: 'Patua One',
     marignTop: 30,
     opacity: 100,
-    color: 'white'
-  }
+    color: 'white',
+  },
 });
 
 const Projects = props => {
@@ -34,15 +34,15 @@ const Projects = props => {
         activeIndex={index}
         direction={direction}
         onSelect={handleSelect}
-        interval={15000}_
-      >
+        interval={15000}
+        _>
         <Carousel.Item>
           <img
             className="d-block w-100"
             src={require('../images/scenic-view-of-mountains-during-dawn-1266810.jpg')}
             alt="Image of road next to a Ugandan lake"
           />
-          <Carousel.Caption className = "d-block">
+          <Carousel.Caption className="d-block">
             <h3>Safe-Mothers-Uganda</h3>
             <p>
               This application is a React front-end with a Redux state
@@ -63,15 +63,13 @@ const Projects = props => {
               <Button
                 color="#e3dac9"
                 variant="contained"
-                href="https://github.com/Lambda-School-Labs/safe-mothers-be"
-              >
+                href="https://github.com/Lambda-School-Labs/safe-mothers-be">
                 GitHub
               </Button>
               <Button
                 color="#e3dac9"
                 variant="contained"
-                href="https://www.youtube.com/watch?v=KM4jNYUOg7Y&t=8s"
-              >
+                href="https://www.youtube.com/watch?v=KM4jNYUOg7Y&t=8s">
                 Demo Link
               </Button>
             </div>
@@ -84,7 +82,7 @@ const Projects = props => {
             alt="Image of caves on a cliff face"
           />
 
-          <Carousel.Caption className = "d-block">
+          <Carousel.Caption className="d-block">
             <h3>Dungeon Explorer </h3>
             <p>
               Created a Java Spring Boot application using Oauth2
@@ -97,15 +95,17 @@ const Projects = props => {
               <Button
                 color="#e3dac9"
                 variant="contained"
-                href="https://github.com/Lambda-School-Labs/safe-mothers-be"
-              >
+                href="https://github.com/Lambda-School-Labs/safe-mothers-be">
                 GitHub
               </Button>
-              <Button color="#e3dac9" variant="contained" href="https://pensive-wiles-464cd6.netlify.app/">
+              <Button
+                color="#e3dac9"
+                variant="contained"
+                href="https://advenuter-game-fe.vercel.app/">
                 Demon Link
               </Button>
             </div>
-          </Carousel.Caption >
+          </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
           <img
@@ -114,7 +114,7 @@ const Projects = props => {
             alt="Image of the miklyway"
           />
 
-          <Carousel.Caption className = "d-block">
+          <Carousel.Caption className="d-block">
             <h3>Finding Planets</h3>
             <p>
               Working with a team of data scientists and a back-end developer.
@@ -129,15 +129,13 @@ const Projects = props => {
               <Button
                 color="#e3dac9"
                 variant="contained"
-                href="https://github.com/orgs/BW-Finding-Planets/dashboard"
-              >
+                href="https://github.com/orgs/BW-Finding-Planets/dashboard">
                 GitHub
               </Button>
               <Button
                 color="#e3dac9"
                 variant="contained"
-                href="https://findingplanets.netlify.com/"
-              >
+                href="https://findingplanets.netlify.com/">
                 Demo Link
               </Button>
             </div>
