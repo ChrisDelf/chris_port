@@ -102,7 +102,7 @@ const Projects = props => {
                 color="#e3dac9"
                 variant="contained"
                 href="https://advenuter-game-fe.vercel.app/">
-                Demon Link
+                Demo Link
               </Button>
             </div>
           </Carousel.Caption>
